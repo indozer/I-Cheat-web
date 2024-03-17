@@ -22,15 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("header");
-var sticky = header.offsetTop;
-
 function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.style.backgroundColor = "rgba(0, 0, 0, 0.76)";
-  } else {
-    header.style.backgroundColor = "transparent"; 
-  }
+    var header = document.getElementById("header");
+    var sticky = 100; 
+  
+    if (window.pageYOffset > sticky) {
+      header.classList.add("fixed");
+    } else {
+      header.classList.remove("fixed");
+    }
 }
+
+window.addEventListener('scroll', function() {
+    myFunction();
+});
