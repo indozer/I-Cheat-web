@@ -1,11 +1,9 @@
 body {
     background-color: rgba(0, 0, 0, 0.76);
-    /* Цвет фона */
 }
 
 body {
     background-image: url(../img/background.jpg);
-    /* Изображение фона */
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
